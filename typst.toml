@@ -1,0 +1,11 @@
+[package]
+name = "tabula"
+version = "0.1.0"
+entrypoint = "src/main.typ"
+authors = ["Simon Buré"]
+license = "MIT"
+description = "A collection of math-related functions for Typst."
+repository = "https://github.com/SimonBure/tabula"
+keywords = ["tables"]
+categories = ["typesetting"]
+compiler = "0.11.0"
