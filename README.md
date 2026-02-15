@@ -1,13 +1,13 @@
-# tabula
+# akatable
 
 A Typst package for creating clean academic tables with built-in publisher format presets.
 
-Tabula wraps Typst's native `table` in a single `academic-table` function that automatically handles the three-line rule pattern (top, header-bottom, bottom) used across scientific publishing, along with proper figure captioning. Choose a format preset and the stroke weights and caption style match the target publisher's guidelines.
+Akatable wraps Typst's native `table` in a single `academic-table` function that automatically handles the three-line rule pattern (top, header-bottom, bottom) used across scientific publishing, along with proper figure captioning. Choose a format preset and the stroke weights and caption style match the target publisher's guidelines.
 
 ## Quick start
 
 ```typst
-#import "@preview/tabula:0.1.0": academic-table
+#import "@preview/akatable:0.1.0": academic-table
 
 #academic-table(
   [Population of major cities],
@@ -51,7 +51,7 @@ This produces a `booktabs`-style table by default: heavy top and bottom rules, a
 
 ### How the three-line rules work
 
-Tabula uses `table.hline()` elements injected around the header — no stroke callback needed. This means multi-row headers (with `colspan`/`rowspan`) work correctly out of the box:
+Akatable uses `table.hline()` elements injected around the header — no stroke callback needed. This means multi-row headers (with `colspan`/`rowspan`) work correctly out of the box:
 
 - **Top rule** — placed at the start of `table.header()`
 - **Mid rule** — placed at the end of `table.header()`, auto-attaches after the last header row
@@ -187,7 +187,7 @@ Contributions are welcome! Some ideas for future work:
 - Table notes/footnotes helper
 - Accessibility metadata
 
-Feel free to open an issue or submit a pull request on [GitHub](https://github.com/SimonBure/tabula).
+Feel free to open an issue or submit a pull request on [GitHub](https://github.com/SimonBure/akatable).
 
 ## License
 

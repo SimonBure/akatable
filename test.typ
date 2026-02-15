@@ -1,4 +1,4 @@
-#import "src/tabula.typ": academic-table
+#import "src/akatable.typ": academic-table
 
 // ── Table 1: Simple baseline ────────────────────────────────────────────────
 
