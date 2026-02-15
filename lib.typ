@@ -1,0 +1,1 @@
+#import "src/tabula.typ": academic-table

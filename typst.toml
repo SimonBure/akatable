@@ -1,7 +1,7 @@
 [package]
 name = "tabula"
 version = "0.1.0"
-entrypoint = "src/tabula.typ"
+entrypoint = "lib.typ"
 authors = ["Simon Buré"]
 license = "MIT"
 description = "Clean academic tables with publisher format presets (APA, IEEE, Nature, etc.)."
