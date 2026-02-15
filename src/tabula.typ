@@ -21,7 +21,7 @@
     top-stroke: 1.5pt,
     mid-stroke: 0.75pt,
     bottom-stroke: 1.5pt,
-    caption-label: (nr) => upper[TABLE #numbering("I") #nr],
+    caption-label: (nr) => upper[TABLE #numbering("I", nr)],
     caption-sep: "\n",
     caption-title-transform: (title) => upper(title),
     caption-align: center,
@@ -76,7 +76,7 @@
 #let academic-table(
   caption,
   cells,
-  format: "booktabs",
+  format: "apa",
   header: (),
   footer: (),
   label: none,
@@ -89,7 +89,7 @@
 
   show figure.caption: cap => {
     set align(preset.caption-align)
-    let label-content = (preset.caption-label)(cap.counter.display(cap.numbering))
+    let label-content = (preset.caption-label)(int(cap.counter.display()))
     let title-content = (preset.caption-title-transform)(cap.body)
     if preset.caption-sep == "\n" {
       label-content

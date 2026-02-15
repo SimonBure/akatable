@@ -1,11 +1,12 @@
 [package]
 name = "tabula"
 version = "0.1.0"
-entrypoint = "src/main.typ"
+entrypoint = "src/tabula.typ"
 authors = ["Simon Buré"]
 license = "MIT"
-description = "Create academic table with ease."
+description = "Clean academic tables with publisher format presets (APA, IEEE, Nature, etc.)."
 repository = "https://github.com/SimonBure/tabula"
-keywords = ["tables"]
+keywords = ["tables", "academic", "booktabs", "formatting"]
 categories = ["typesetting"]
-compiler = "0.11.0"
+exclude = ["test.typ"]
+compiler = "0.14.2"
