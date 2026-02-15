@@ -1,9 +1,9 @@
 #let academic-table(
   caption,
   cells,
-  header: none,
-  footer: none,
   stroke-strength:1pt,
+  header: (),
+  footer: (),
   label:none,
   ..args
   ) = {
@@ -23,15 +23,20 @@
       table(
         columns: columns,
         ..args,
-        stroke: (_, y) => if y == 0 {(top: stroke-strength, bottom: stroke-strength)} else if y == n-rows {if footer == none {(bottom: stroke-strength)} else {(bottom: stroke-strength, top: stroke-strength)}} else {none},
+        stroke: none,
         table.header(
+          table.hline(),
           ..header,
-
+          table.hline(),
         ),
         ..cells,
-        table.footer(
-          ..footer,
-        ),
+        if footer != () {
+          table.footer(
+            table.hline(),
+            ..footer,
+          )
+        },
+        table.hline()
       ),
       caption: caption,
     ) #label
