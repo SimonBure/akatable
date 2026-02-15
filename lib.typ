@@ -1,1 +1,1 @@
-#import "src/tabula.typ": academic-table
+#import "src/akatable.typ": academic-table
